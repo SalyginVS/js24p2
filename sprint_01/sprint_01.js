@@ -4,15 +4,18 @@
 
 // Task 01
 // Создайте массив arr_01, который содержит три элемента - число, строку и boolean. Выведите в консоль. 
-
+const arr_01 = [1, '1', true];
+console.log(arr_01);
 
 // Task 02
 // Создайте массив arr_02, который содержит два элемента - true, false. Выведите в консоль. 
-
+const arr_02 = [true, false];
+console.log(arr_02);
 
 // Task 03
 // Создайте массив arr_03 содержащий элементы  "Debian", 10, "Buster". Выведите в консоль. 
-
+const arr_03 = ["Debian", 10, "Buster"];
+console.log(arr_03);
 
 // Task 04
 // Создан массив arr_04. Напишите функцию t04, которая выводит длину массива в .out-4. 
@@ -20,7 +23,7 @@
 let arr_04 = ["Linux Mint", 19.1, "Tessa"];
 
 const t04 = () => {
-
+    document.querySelector('.out-4').textContent = arr_04.length;
 }
 
 document.querySelector('.b-4').addEventListener('click', t04);
@@ -258,7 +261,7 @@ const t23 = (m1, m2) => {
 }
 
 document.querySelector('.b-23').addEventListener('click', () => {
-   document.querySelector('.out-23').textContent =  t23([44, 55] , [66, 77]);
+    document.querySelector('.out-23').textContent = t23([44, 55], [66, 77]);
 });
 
 
@@ -275,7 +278,7 @@ const t24 = (m1, m2) => {
 }
 
 document.querySelector('.b-24').addEventListener('click', () => {
-   document.querySelector('.out-24').textContent =  t24([44, 55] , [44, 55]);
+    document.querySelector('.out-24').textContent = t24([44, 55], [44, 55]);
 });
 
 
@@ -291,5 +294,5 @@ const t25 = (arr) => {
 }
 
 document.querySelector('.b-25').addEventListener('click', () => {
-   document.querySelector('.out-25').textContent =  t25([44, 55]);
+    document.querySelector('.out-25').textContent = t25([44, 55]);
 });
