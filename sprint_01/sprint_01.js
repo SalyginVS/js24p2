@@ -35,7 +35,7 @@ document.querySelector('.b-4').addEventListener('click', t04);
 let arr_05 = ["elementary", "OS", 5.0, "Hera"];
 
 const t05 = (arr) => {
-
+    return arr.length;
 }
 
 document.querySelector('.b-5').addEventListener('click', () => {
@@ -50,7 +50,8 @@ document.querySelector('.b-5').addEventListener('click', () => {
 const arr_06 = [];
 
 const t06 = () => {
-
+    arr_06.push(90, 60);
+    console.log(arr_06);
 }
 
 document.querySelector('.b-6').addEventListener('click', t06);
@@ -62,7 +63,9 @@ document.querySelector('.b-6').addEventListener('click', t06);
 const arr_07 = ["OS", "Windows"];
 
 const t07 = () => {
-
+    arr_07.splice(1, 0, "Arch", "Linux");
+    //arr_07.splice(2, 0, "Linux");
+    console.log(arr_07)
 }
 
 document.querySelector('.b-7').addEventListener('click', t07);
@@ -74,7 +77,10 @@ document.querySelector('.b-7').addEventListener('click', t07);
 const arr_08 = ["OS", "Windows"];
 
 const t08 = () => {
-
+    arr_08.splice(1, 0, "Open");
+    arr_08[20] = "Linux";
+    console.log(arr_08)
+    document.querySelector('.out-8').textContent = arr_08.length;
 }
 
 document.querySelector('.b-8').addEventListener('click', t08);
@@ -87,7 +93,9 @@ document.querySelector('.b-8').addEventListener('click', t08);
 const arr_09 = [1111, 2222];
 
 const t09 = () => {
-
+    const num = +document.querySelector('input.i-9').value;
+    arr_09.push(num);
+    console.log(arr_09);
 }
 
 document.querySelector('.b-9').addEventListener('click', t09);
@@ -99,7 +107,8 @@ document.querySelector('.b-9').addEventListener('click', t09);
 const arr_10 = ["CentOS", "Mandriva Linux", "EduLinux", "Fedora", "Mageia"];
 
 const t10 = () => {
-
+    arr_10.pop();
+    console.log(arr_10);
 }
 
 document.querySelector('.b-10').addEventListener('click', t10);
@@ -111,7 +120,8 @@ document.querySelector('.b-10').addEventListener('click', t10);
 const arr_11 = ["SUSE", "Unbreakable Linux", "Yellow Dog", "Slackware"];
 
 const t11 = () => {
-
+    arr_11.unshift(document.querySelector('input.i-11').value);
+    console.log(arr_11);
 }
 
 document.querySelector('.b-11').addEventListener('click', t11);
@@ -123,7 +133,8 @@ document.querySelector('.b-11').addEventListener('click', t11);
 const arr_12 = ["Slackware", "Почему", "Патрик", "Бог"];
 
 const t12 = () => {
-
+    arr_12.shift();
+    console.log(arr_12);
 }
 
 document.querySelector('.b-12').addEventListener('click', t12);
@@ -135,7 +146,7 @@ document.querySelector('.b-12').addEventListener('click', t12);
 const arr_13 = ["Slackware", "Slax", "Porteus", "Alpine Linux"];
 
 const t13 = () => {
-
+    document.querySelector('.out-13').textContent = arr_13.join("_"); 
 }
 
 document.querySelector('.b-13').addEventListener('click', t13);
@@ -147,7 +158,11 @@ document.querySelector('.b-13').addEventListener('click', t13);
 const arr_14 = [19.1, 20.04, 20.1, 21.04];
 
 const t14 = () => {
-
+    let out = '';
+    for (let i = 0; i < arr_14.length; i++) {
+        out += `${arr_14[i]}_`;
+    }
+    document.querySelector('.out-14').textContent = out;
 }
 
 document.querySelector('.b-14').addEventListener('click', t14);
