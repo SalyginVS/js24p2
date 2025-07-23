@@ -146,7 +146,7 @@ document.querySelector('.b-12').addEventListener('click', t12);
 const arr_13 = ["Slackware", "Slax", "Porteus", "Alpine Linux"];
 
 const t13 = () => {
-    document.querySelector('.out-13').textContent = arr_13.join("_"); 
+    document.querySelector('.out-13').textContent = arr_13.join("_");
 }
 
 document.querySelector('.b-13').addEventListener('click', t13);
@@ -174,7 +174,11 @@ document.querySelector('.b-14').addEventListener('click', t14);
 const arr_15 = [22, 33, 44, 55, 65, 66, 67, 68];
 
 const t15 = () => {
-
+    let out = '';
+    for (let i = 0; i < arr_15.length; i++) {
+        if (arr_15[i] % 2 === 0) out += `${arr_15[i]}_`;
+    }
+    document.querySelector('.out-15').textContent = out;
 }
 
 document.querySelector('.b-15').addEventListener('click', t15);
@@ -187,7 +191,13 @@ document.querySelector('.b-15').addEventListener('click', t15);
 const arr_16 = ["Warty Warthog", "Hoary Hedgehog", "Breezy Badger", "Dapper Drake"];
 
 const t16 = () => {
-
+    let out = '';
+    for (let i = 0; i < arr_16.length; i++) {
+        if (i % 2 === 0) {
+            out += `${arr_16[i]}_`;
+        }
+    }
+    document.querySelector('.out-16').textContent = out;
 }
 
 document.querySelector('.b-16').addEventListener('click', t16);
@@ -201,7 +211,13 @@ document.querySelector('.b-16').addEventListener('click', t16);
 const arr_17 = ["Edgy Eft", "Feisty Fawn", "Gutsy Gibbon"];
 
 const t17 = () => {
+    let out = '';
+    for (let i = arr_17.length - 1; i >= 0; i--) {
 
+        out += `${arr_17[i]}_`;
+
+    }
+    document.querySelector('.out-17').textContent = out;
 }
 
 document.querySelector('.b-17').addEventListener('click', t17);
@@ -213,7 +229,14 @@ document.querySelector('.b-17').addEventListener('click', t17);
 const arr_18 = ["Hardy", "Heron", "Intrepid", "Ibex", "Jaunty", "Jackalope", "Lucid", "Lynx", "Maverick"];
 
 const t18 = () => {
-
+    let out = '';
+    for (let i = 0; i < arr_18.length; i++) {
+        if (i === 0) out += `${arr_18[i]} `;
+        else if (i === 1) out += `${arr_18[i]} `;
+        else if (i === 5) out += `${arr_18[i]} `;
+        else if (i === 7) out += `${arr_18[i]} `;
+    }
+    document.querySelector('.out-18').textContent = out;
 }
 
 document.querySelector('.b-18').addEventListener('click', t18);
@@ -224,7 +247,12 @@ document.querySelector('.b-18').addEventListener('click', t18);
 const arr_19 = [11, 22, 33];
 
 const t19 = () => {
+    let out = '';
+    for (let i = 0; i < arr_19.length; i++) {
+        out += `${i} : ${arr_19[i]}<br>`;
+    }
 
+    document.querySelector('.out-19').innerHTML = out;
 }
 
 document.querySelector('.b-19').addEventListener('click', t19);
@@ -236,7 +264,7 @@ document.querySelector('.b-19').addEventListener('click', t19);
 const arr_20 = [];
 
 const t20 = () => {
-
+    document.querySelector('.out-20').innerHTML = arr_20[100];
 }
 
 document.querySelector('.b-20').addEventListener('click', t20);
@@ -248,7 +276,8 @@ document.querySelector('.b-20').addEventListener('click', t20);
 const arr_21 = ['aa', 'bb', 'cc'];
 
 const t21 = () => {
-
+    if (arr_21.length < 10) arr_21.push(document.querySelector('input.i-21').value);
+    document.querySelector('.out-21').textContent = arr_21.join("_");
 }
 
 document.querySelector('.b-21').addEventListener('click', t21);
@@ -260,7 +289,12 @@ document.querySelector('.b-21').addEventListener('click', t21);
 const arr_22 = [101, 201, 301, 401];
 
 const t22 = (n) => {
-
+    for (let i = 0; i < arr_22.length; i++) {
+        if (arr_22[i] === n) {
+            return document.querySelector('.out-22').textContent = 1;
+        }
+    }
+    return document.querySelector('.out-22').textContent = 0;
 }
 
 document.querySelector('.b-22').addEventListener('click', () => {
@@ -272,7 +306,8 @@ document.querySelector('.b-22').addEventListener('click', () => {
 // Функция получает два массива как аргументы. Сравнивает их длину. Если длины совпадают - возвращает true, если не совпадают - false.
 
 const t23 = (m1, m2) => {
-
+    if (m1.length === m2.length) return true;
+    else return false;
 }
 
 document.querySelector('.b-23').addEventListener('click', () => {
