@@ -12,7 +12,7 @@ const t01 = arr => {
 };
 
 document.querySelector('.b-1').addEventListener('click', () => {
-    document.querySelector('.out-1').textContent = t01(4);
+    document.querySelector('.out-1').textContent = t01(5);
 });
 
 
@@ -122,7 +122,7 @@ document.querySelector('.b-7').addEventListener('click', t07);
 const arr_08 = ["OS", "Windows"];
 
 const t08 = (arr) => {
-    res = [];
+    let res = [];
     for (let i = 0; i < arr.length; i++) {
         res[i] = arr[i];
     }
@@ -301,8 +301,8 @@ const arr_19 = [11, 22, 33];
 let res_19 = [];
 
 const t19 = () => {
-    res_19 = arr_19.map(function (item, index) {
-        if (index%2 === 0) return 0;
+    res_19 = arr_19.map(function (item) {
+        if (item%2 === 0) return 0;
         return item;
     })
     console.log(res_19);
@@ -321,7 +321,8 @@ arr_20[10] = 200;
 let res_20 = [];
 
 const t20 = () => {
-
+    res_20 = arr_20.map(item => item*2);
+    console.log(res_20);
 }
 
 document.querySelector('.b-20').addEventListener('click', t20);
@@ -333,7 +334,8 @@ document.querySelector('.b-20').addEventListener('click', t20);
 let arr_21 = ['Aa ', ' bB ', ' cC'];
 
 const t21 = () => {
-
+    arr_21 = arr_21.map(item => item.toLowerCase().trim());
+    console.log(arr_21);
 }
 
 document.querySelector('.b-21').addEventListener('click', t21);
@@ -345,7 +347,8 @@ document.querySelector('.b-21').addEventListener('click', t21);
 let arr_22 = [101, 201, 301, 401];
 
 const t22 = () => {
-
+    arr_22 = arr_22.map((item, index) => index );
+    console.log(arr_22);
 }
 
 document.querySelector('.b-22').addEventListener('click', t22);
@@ -358,7 +361,8 @@ const arr_23 = [1, 101, 3, 102, 4, 201, 202, -9];
 let res_23 = [];
 
 const t23 = () => {
-
+    res_23 = arr_23.filter(item => item > 100);
+    console.log(res_23);
 }
 
 document.querySelector('.b-23').addEventListener('click', t23);
@@ -371,7 +375,8 @@ const arr_24 = [1, 101, 3, 102, 4, 201, 202, -9];
 let res_24 = [];
 
 const t24 = () => {
-
+    res_24 = arr_24.filter(item => item%2 === 0);
+    console.log(res_24);
 }
 
 document.querySelector('.b-24').addEventListener('click', t24);
@@ -380,11 +385,13 @@ document.querySelector('.b-24').addEventListener('click', t24);
 // Task 25
 // Функция должна на основе arr_25 создавать массив res_25  который содержит не пустые строки из arr_25. В данном задании под непустыми строками понимаем строки длиной больше 1 и не состоящие из одних пробелов. Выведите в консоль res_25.
 
-const arr_25 = ['test', '', 'best', '  ', 'rest'];
+const arr_25 = ['test', '', 'best', '  ', '   rest'];
 let res_25 = [];
 
 const t25 = () => {
-
+   // const arr_255 = arr_25.map(item => item.trim());
+   res_25 = arr_25.filter(item => item.length > 1 && !/^\s*$/.test(item));
+   console.log(res_25);
 }
 
 document.querySelector('.b-25').addEventListener('click', t25);
