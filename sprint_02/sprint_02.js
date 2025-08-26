@@ -8,11 +8,11 @@
 // Array(10)
 
 const t01 = arr => {
-
+    return Array.isArray(arr);
 };
 
 document.querySelector('.b-1').addEventListener('click', () => {
-    document.querySelector('.out-1').textContent = t01([4,5]);
+    document.querySelector('.out-1').textContent = t01(4);
 });
 
 
@@ -22,7 +22,12 @@ document.querySelector('.b-1').addEventListener('click', () => {
 const arr_02 = [19, 17, 22, 47, 15];
 
 const t02 = () => {
- 
+    let i2 = +document.querySelector('input.i-2').value;
+    if (arr_02.includes(i2)) document.querySelector('.out-2').textContent = arr_02.join(" ");
+    else {
+        arr_02.push(i2);
+        document.querySelector('.out-2').textContent = arr_02.join(" ");
+    }
 }
 
 document.querySelector('.b-2').addEventListener('click', t02);
@@ -31,7 +36,10 @@ document.querySelector('.b-2').addEventListener('click', t02);
 // Напишите функцию, которая эмулирует работу метода includes с помощью цикла. Функция принимает два аргумента: массив и значение. С помощью цикла перебирает массив и если находит совпадение, то возвращает true. Если не находит - false.
 
 const t03 = (arr, item) => {
-
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === item) return true;
+    }
+    return false;
 }
 
 document.querySelector('.b-3').addEventListener('click', () => {
@@ -46,7 +54,11 @@ document.querySelector('.b-3').addEventListener('click', () => {
 let arr_04 = ["joust", "river raid", "seaquest", "asteroids", "dig dug"];
 
 const t04 = () => {
-   
+    let out = [];
+    for (let i = 0; i < arr_04.length; i++) {
+        if (i % 2 === 0) out.push(i);
+    }
+    document.querySelector('.out-4').textContent = out.join('_');
 }
 
 document.querySelector('.b-4').addEventListener('click', t04);
@@ -58,7 +70,11 @@ document.querySelector('.b-4').addEventListener('click', t04);
 let arr_05 = [22, 12, -9, 99, -8, -12, 55, 23];
 
 const t05 = () => {
-  
+    let a = arr_05[0];
+    for (let i = 0; i < arr_05.length; i++) {
+        if (arr_05[i] < a) a = arr_05[i];
+    }
+    document.querySelector('.out-5').textContent = a;
 }
 
 document.querySelector('.b-5').addEventListener('click', t05);
@@ -70,7 +86,16 @@ document.querySelector('.b-5').addEventListener('click', t05);
 const arr_06 = ["joust", "river raid", "seaquest", "asteroids", "dig dug"];
 
 const t06 = () => {
-  
+    let a = arr_06[0].length;
+    for (let i = 0; i < arr_06.length; i++) {
+        if (arr_06[i].length > a) a = arr_06[i].length
+    }
+    for (let i = 0; i < arr_06.length; i++) {
+        if (arr_06[i].length === a) {
+            document.querySelector('.out-6').textContent = arr_06[i];
+            return;
+        }
+    }
 }
 
 document.querySelector('.b-6').addEventListener('click', t06);
@@ -82,7 +107,10 @@ document.querySelector('.b-6').addEventListener('click', t06);
 const arr_07 = [55];
 
 const t07 = () => {
-   
+    let i7 = +document.querySelector('input.i-7').value;
+    arr_07.unshift(i7);
+    arr_07.push(i7);
+    document.querySelector('.out-7').textContent = arr_07.join('_');
 }
 
 document.querySelector('.b-7').addEventListener('click', t07);
@@ -94,7 +122,11 @@ document.querySelector('.b-7').addEventListener('click', t07);
 const arr_08 = ["OS", "Windows"];
 
 const t08 = (arr) => {
-   
+    res = [];
+    for (let i = 0; i < arr.length; i++) {
+        res[i] = arr[i];
+    }
+    return res;
 }
 
 document.querySelector('.b-8').addEventListener('click', () => {
@@ -136,8 +168,9 @@ document.querySelector('.b-10').addEventListener('click', t10);
 let arr_11 = ["SUSE", "Unbreakable Linux", "Yellow Dog", "Slackware"];
 
 const t11 = () => {
- 
-
+    let i11 = document.querySelector('input.i-11').value;
+    arr_11 = [i11, ...arr_11];
+    document.querySelector('.out-11').textContent = arr_11.join(' ');
 }
 
 document.querySelector('.b-11').addEventListener('click', t11);
@@ -163,6 +196,7 @@ document.querySelector('.b-12').addEventListener('click', t12);
 const arr_13 = ["Slackware", "Slax", "Porteus", "Alpine Linux"];
 
 const t13 = () => {
+    document.querySelector('.out-13').textContent = arr_13.at(2);
 }
 
 document.querySelector('.b-13').addEventListener('click', t13);
@@ -174,7 +208,14 @@ document.querySelector('.b-13').addEventListener('click', t13);
 const arr_14 = [666, 777, 888];
 
 const t14 = () => {
-   
+    let i14 = +document.querySelector('input.i-14').value;
+    for (let i = 0; i < arr_14.length; i++) {
+        if (arr_14[i] === i14) {
+            document.querySelector('.out-14').textContent = i;
+            return;
+        }
+    }
+    document.querySelector('.out-14').textContent = -1;
 }
 
 document.querySelector('.b-14').addEventListener('click', t14);
@@ -186,7 +227,14 @@ document.querySelector('.b-14').addEventListener('click', t14);
 const arr_15 = [666, 777, 888];
 
 const t15 = () => {
-   
+    let i15 = +document.querySelector('input.i-15').value;
+    for (let i = 0; i < arr_15.length; i++) {
+        if (arr_15[i] === i15) {
+            document.querySelector('.out-15').textContent = i;
+            return;
+        }  
+    }
+    document.querySelector('.out-15').textContent = false;
 }
 
 document.querySelector('.b-15').addEventListener('click', t15);
@@ -196,12 +244,16 @@ document.querySelector('.b-15').addEventListener('click', t15);
 // Task 16
 // Создан массив arr_16. Напишите функцию, которая возвращает true, если в массиве пары чисел одинаковые, и false если нет. Массив всегда будет иметь четную длину.
 
-const arr_16 = [18, 18, 19, 19, 20, 20]; // ожидаю true
-// const arr_16 = [18, 18, 19, 1, 20, 20]; // а на этом примере даст false.
+//const arr_16 = [18, 18, 19, 19, 20, 20]; // ожидаю true
+const arr_16 = [18, 18, 19, 1, 20, 20]; // а на этом примере даст false.
 
 const t16 = () => {
-  
+ for (let i = 0; i < arr_16.length; i += 2) {
+    if (arr_16[i] !== arr_16[i + 1]) return false;
+  }
+  return true; 
 }
+
 
 document.querySelector('.b-16').addEventListener('click', () => {
     document.querySelector('.out-16').textContent = t16();
@@ -214,7 +266,13 @@ document.querySelector('.b-16').addEventListener('click', () => {
 const arr_17 = [100, 200, 300, 100, 200, 300];
 
 const t17 = (arr, n) => {
-   
+    let idx = arr.indexOf(n);
+    let lastIdx = -1;
+    while (idx != -1 ) {
+        lastIdx = idx;
+        idx = arr.indexOf(n, idx + 1);
+    }
+    return lastIdx;
 }
 
 document.querySelector('.b-17').addEventListener('click', () => {
@@ -228,7 +286,8 @@ document.querySelector('.b-17').addEventListener('click', () => {
 const arr_18 = [11, 22, 33];
 
 const t18 = () => {
-    
+    const out_18 = arr_18.map(t888);
+    document.querySelector('.out-18').textContent = out_18.join(' ');
 }
 
 const t888 = (item) => item + 10;
@@ -242,7 +301,11 @@ const arr_19 = [11, 22, 33];
 let res_19 = [];
 
 const t19 = () => {
-    
+    res_19 = arr_19.map(function (item, index) {
+        if (index%2 === 0) return 0;
+        return item;
+    })
+    console.log(res_19);
 }
 
 document.querySelector('.b-19').addEventListener('click', t19);
@@ -258,7 +321,7 @@ arr_20[10] = 200;
 let res_20 = [];
 
 const t20 = () => {
-  
+
 }
 
 document.querySelector('.b-20').addEventListener('click', t20);
@@ -270,7 +333,7 @@ document.querySelector('.b-20').addEventListener('click', t20);
 let arr_21 = ['Aa ', ' bB ', ' cC'];
 
 const t21 = () => {
-   
+
 }
 
 document.querySelector('.b-21').addEventListener('click', t21);
@@ -282,7 +345,7 @@ document.querySelector('.b-21').addEventListener('click', t21);
 let arr_22 = [101, 201, 301, 401];
 
 const t22 = () => {
-   
+
 }
 
 document.querySelector('.b-22').addEventListener('click', t22);
@@ -295,7 +358,7 @@ const arr_23 = [1, 101, 3, 102, 4, 201, 202, -9];
 let res_23 = [];
 
 const t23 = () => {
-    
+
 }
 
 document.querySelector('.b-23').addEventListener('click', t23);
@@ -308,7 +371,7 @@ const arr_24 = [1, 101, 3, 102, 4, 201, 202, -9];
 let res_24 = [];
 
 const t24 = () => {
- 
+
 }
 
 document.querySelector('.b-24').addEventListener('click', t24);
@@ -321,7 +384,7 @@ const arr_25 = ['test', '', 'best', '  ', 'rest'];
 let res_25 = [];
 
 const t25 = () => {
-   
+
 }
 
 document.querySelector('.b-25').addEventListener('click', t25);
