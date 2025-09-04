@@ -47,7 +47,6 @@ const t03 = (arr, val1, val2) => {
 document.querySelector('.b-3').addEventListener('click', () => {
     const arr_03 = [22, 33, 44, 55, 66, 33, 22, 33, 44, 22, 44, 33];
     document.querySelector('.out-3').textContent = t03(arr_03, 33, 0);
-        console.log(arr_03)
 });
 
 
@@ -55,7 +54,8 @@ document.querySelector('.b-3').addEventListener('click', () => {
 // Функция должна принимать два аргумента - массив и значение. Функция должна заменить первое вхождение значения в массив на нуль и возвратить массив.
 
 const t04 = (arr, val1) => {
-
+    arr[arr.indexOf(val1)] = 0;
+    return arr;
 };
 
 document.querySelector('.b-4').addEventListener('click', () => {
@@ -68,7 +68,8 @@ document.querySelector('.b-4').addEventListener('click', () => {
 // Функция должна принимать два аргумента - массив и значение. Функция должна заменить последнее вхождение значения в массив на нуль и возвратить массив.
 
 const t05 = (arr, val1) => {
-
+    arr[arr.lastIndexOf(val1)] = 0;
+    return arr;
 };
 
 document.querySelector('.b-5').addEventListener('click', () => {
@@ -81,7 +82,11 @@ document.querySelector('.b-5').addEventListener('click', () => {
 // Функция должна принимать два массива и проверять, что входящие в них элементы равны. Под равенством понимается сравнение по типу (строгое), по значению, и по положению в массиве. Функция должна возвращать true/false.
 
 const t06 = (arr1, arr2) => {
-
+    if (arr1.length !== arr2.length) return false;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) return false;
+    }
+    return true;
 };
 
 document.querySelector('.b-6').addEventListener('click', () => {
@@ -93,7 +98,7 @@ document.querySelector('.b-6').addEventListener('click', () => {
 // Функция должна принимать массив и с помощью метода find искать в нем первое значение которое больше 10 но меньше 13 и возвращать данное значение.
 
 const t07 = (arr1) => {
-
+    return arr1.find(item => item > 10 && item < 13);
 };
 
 document.querySelector('.b-7').addEventListener('click', () => {
@@ -106,7 +111,14 @@ document.querySelector('.b-7').addEventListener('click', () => {
 // Функция должна принимать массив и с помощью метода find искать в нем последнее значение которое больше 10 но меньше 13 и возвращать данное значение.
 
 const t08 = (arr1) => {
-
+    let idx = 0;
+    for (let i = arr1.length - 1; i >= 0; i--) {
+        if (arr1[i] > 10 && arr1[i] < 13) {
+            idx = i;
+            break;
+        }
+    }
+    return arr1.find((item, index) => index === idx);
 };
 
 document.querySelector('.b-8').addEventListener('click', () => {
