@@ -132,6 +132,23 @@ document.querySelector('.b-8').addEventListener('click', () => {
 
 const t09 = (arr, val) => {
 
+    // solution with includes() method 
+    // let srchVal = String(val);
+    // for (let i = 0; i < arr.length; i++) {
+    //     let arrEl = String(arr[i]);
+    //     if (arrEl.includes(srchVal)) {
+    //         return i; 
+    //     }
+    // }
+
+    // solution with findIndex() and includes() methods 
+    let srchVal = String(val);
+    let  index = arr.findIndex(item => {
+        let arrEl = String(item);
+        return arrEl.includes(srchVal);
+    });
+
+    return index;
 };
 
 document.querySelector('.b-9').addEventListener('click', () => {
@@ -149,7 +166,7 @@ const t10 = (arr, val) => {
 
 document.querySelector('.b-10').addEventListener('click', () => {
     const arr_10 = [1, 12, 3, 4, 4, 5];
-    document.querySelector('.out-10').textContent = t10(arr_10, 4);
+    document.querySelector('.out-10').textContent = t10(arr_10, 1);
 });
 
 
