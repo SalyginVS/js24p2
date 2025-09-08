@@ -131,29 +131,19 @@ document.querySelector('.b-8').addEventListener('click', () => {
 // Функция должна принимать массив и значение. Функция должна искать вхождение (не строгое) значения в массив, и возвращать первый индекс вхождения.
 
 const t09 = (arr, val) => {
-
-    // solution with includes() method 
-    // let srchVal = String(val);
+    let srchVal = String(val);
     // for (let i = 0; i < arr.length; i++) {
-    //     let arrEl = String(arr[i]);
-    //     if (arrEl.includes(srchVal)) {
-    //         return i; 
+    //     if (String(arr[i]) === srchVal) {
+    //         return i;
     //     }
     // }
-
-    // solution with findIndex() and includes() methods 
-    let srchVal = String(val);
-    let  index = arr.findIndex(item => {
-        let arrEl = String(item);
-        return arrEl.includes(srchVal);
-    });
-
-    return index;
+    // return -1;
+    return arr.findIndex(item => String(item) === srchVal);
 };
 
 document.querySelector('.b-9').addEventListener('click', () => {
     const arr_09 = [1, 12, 3, 4, 4, 5];
-    document.querySelector('.out-9').textContent = t09(arr_09, 4);
+    document.querySelector('.out-9').textContent = t09(arr_09, 1);
 });
 
 
@@ -161,12 +151,18 @@ document.querySelector('.b-9').addEventListener('click', () => {
 // Функция должна принимать массив и значение. Функция должна искать вхождение (не строгое) значения в массив, и возвращать последний индекс вхождения.
 
 const t10 = (arr, val) => {
-
+    let srchVal = String(val);
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (String(arr[i]) === srchVal) {
+            return i;
+        }
+    }
+    return -1;
 };
 
 document.querySelector('.b-10').addEventListener('click', () => {
-    const arr_10 = [1, 12, 3, 4, 4, 5];
-    document.querySelector('.out-10').textContent = t10(arr_10, 1);
+    const arr_10 = [1, 12, 3, 4, '4', 5];
+    document.querySelector('.out-10').textContent = t10(arr_10, 4);
 });
 
 
