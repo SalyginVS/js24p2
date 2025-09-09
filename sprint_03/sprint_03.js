@@ -185,7 +185,12 @@ let arr_12 = [10, 20, 30, 40];
 let res_12 = [];
 
 const t12 = () => {
-
+    res_12.length = 0; // очищаем массив перед заполнением
+    arr_12.forEach((item, index) => {
+        if (item % 2 === 0) {
+            res_12.push(index);
+        }
+    });
 };
 
 document.querySelector('.b-12').addEventListener('click', () => {
@@ -201,7 +206,10 @@ let arr_13 = [10, 20, 30, 40];
 let res_13 = 0;
 
 const t13 = () => {
-
+    res_13 = 0; // обнуляем перед подсчетом
+    arr_13.forEach(item => {
+        res_13 += item;
+    });
 };
 
 document.querySelector('.b-13').addEventListener('click', () => {
@@ -217,10 +225,16 @@ let arr_14 = [10, 20, 30, 40, 50, 60];
 let res_14 = [];
 
 const t14 = () => {
+    // res_14 = [];
+    // for (let i = 0; i < arr_14.length; i += 2) {
+    //     res_14.push(arr_14.at(i));
+    // }
     res_14 = [];
-    for (let i = 0; i < arr_14.length; i += 2) {
-        res_14.push(arr_14.at(i));
-    }
+    arr_14.forEach((item, index) => {
+        if (index % 2 === 0) {
+            res_14.push(item);
+        }
+    });
 };
 
 document.querySelector('.b-14').addEventListener('click', () => {
@@ -244,6 +258,10 @@ const t15 = () => {
         res_15.push(item);
     });
 };
+// Метод forEach перебирает только существующие элементы массива (индексы, у которых есть значения).
+// В примере с arr_15 пропущенные индексы (с 3 по 99, с 101 по 199 и т.д.) не обрабатываются, и в res_15 попадают только значения по реально существующим индексам (10, 20, 30, 40, 50, 60).
+// Вывод:
+// Метод forEach не перебирает "пустые" (неинициализированные) элементы массива, а только те, которые реально существуют.
 
 document.querySelector('.b-15').addEventListener('click', () => {
     console.log(arr_15);
