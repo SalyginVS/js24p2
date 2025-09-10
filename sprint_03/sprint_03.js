@@ -113,6 +113,7 @@ document.querySelector('.b-7').addEventListener('click', () => {
 // Функция должна принимать массив и с помощью метода find искать в нем последнее значение которое больше 10 но меньше 13 и возвращать данное значение.
 
 const t08 = (arr1) => {
+        // Не оптимально (но работает)
     let idx = 0;
     for (let i = arr1.length - 1; i >= 0; i--) {
         if (arr1[i] > 10 && arr1[i] < 13) {
@@ -120,7 +121,7 @@ const t08 = (arr1) => {
             break;
         }
     }
-    // Не оптимально (но работает)
+
     return arr1.find((item, index) => index === idx);
 };
 
@@ -157,7 +158,7 @@ const t10 = (arr, val) => {
 
 document.querySelector('.b-10').addEventListener('click', () => {
     const arr_10 = [1, 12, 3, 4, 4, 5];
-    document.querySelector('.out-10').textContent = t10(arr_10, '4');
+    document.querySelector('.out-10').textContent = t10(arr_10, 4);
 });
 
 
