@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sprint 04. JS24/2 - itgid.info</title>
+  <meta name="author" content="itgid.info">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Jura:wght@300..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/night.css"> -->
+  <link rel="icon" type="image/svg+xml" href="https://itgid.info/favicon.ico">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="one-column">
+        <h1>JS24/2. Sprint 04</h1>
+        <h2>Вложенные циклы</h2>
+
+        <section>
+          <h3>Task 01</h3>
+          <div>
+            <p>Создайте функцию. Функция с помощью вложенных циклов создает строку:</p>
+            <p>4=4 3 2 1 0 3=4 3 2 1 0 2=4 3 2 1 0 1=4 3 2 1 0 0=4 3 2 1 0</p>
+            <p> и выводит в .out-1.</p>
+          </div>
+          <div class="out out-1"></div>
+          <div><button class="button-primary b-1">b-1</button></div>
+        </section>
+
+        <section>
+          <h3>Task 02</h3>
+          <div>
+            <p>Создайте функцию. Функция с помощью вложенных циклов создает строку:</p>
+            0****<br>1****<br>2****<br>3****<br>4****<br>
+            <p>и выводит в .out-1 с помощью innerHTML</p>
+          </div>
+          <div class="out out-2"></div>
+          <div><button class="button-primary b-2">b-2</button></div>
+        </section>
+
+        <section>
+          <h3>Task 03</h3>
+          <div>
+            <p>Функция должна выводить прямоугольник на страницу состоящий из символов звездочка.</p>
+            <p></p>В горизонтали 6 звездочек, количество линий - число, которое пользователь ввел в input.i-3.</p>
+            <p>Например для введенного числа 3 должно получится так:</p>
+            ******<br>******<br>******<br>
+            <p>Перенос строки делайте с помощью тега br.</p>
+          </div>
+          <div>input i-3 <input type="number" class="i-3" value="3"></div>
+          <div class="out out-3"></div>
+          <div><button class="button-primary b-3">b-3</button></div>
+        </section>
+
+        <section>
+          <h3>Task 04</h3>
+          <div>
+            <p>Функция должна выводить прямоугольник на страницу состоящий из чисел. В горизонтали 6 чисел от 5 до нуля,
+              количество линий - число, которое пользователь ввел в input.i-4.</p>
+            <p>Например для введенного числа 3 должно получится так:</p>
+            5_4_3_2_1_0_<br>5_4_3_2_1_0_<br>5_4_3_2_1_0_<br>
+            <p>Перенос строки делайте с помощью тега br.</p>
+          </div>
+          <div>input i-4 <input type="number" class="i-4" value="3"></div>
+          <div class="out out-4"></div>
+          <div><button class="button-primary b-4">b-4</button></div>
+        </section>
+
+        <section>
+          <h3>Task 05</h3>
+          <div>
+            <p>Функция должна выводить прямоугольник на страницу состоящий из чисел. В горизонтали числа от введенного в
+              input.i-51 до нуля, количество линий - число, которое пользователь ввел в input.i-52.</p>
+            <p>Например, для введенных чисел 4 и 2:</p>
+            4_3_2_1_0_<br>4_3_2_1_0_<br>
+            <p>Перенос строки делайте с помощью тега br.</p>
+          </div>
+          <div>input i-51 <input type="number" value="4" class="i-51"></div>
+          <div>input i-52 <input type="number" value="2" class="i-52"></div>
+          <div class="out out-5"></div>
+          <div><button class="button-primary b-5">b-5</button></div>
+        </section>
+
+        <section>
+          <h3>Task 06</h3>
+          <div>
+            <p>Функция должна с помощью циклов рисовать такую фигуру:</p>
+            | * * * * |<br>| * * * * |<br>| * * * * |<br>
+            <p>и выводить в .out-6. Будьте внимательны - не добавляйте лишних пробелов!!!</p>
+          </div>
+          <div><button class="button-primary b-6">b-6</button></div>
+          <div class="out out-6"></div>
+        </section>
+
+        <section>
+          <h3>Task 07</h3>
+          <div>
+            <p>Функция должна с помощью циклов рисовать такую фигуру:</p>
+            | - - - - |<br>| * * * * |<br>| * * * * |<br>| * * * * |<br>| - - - - |<br>
+            <p>и выводить в .out-7. Будьте внимательны - не добавляйте лишних пробелов!!!</p>
+          </div>
+          <div class="out out-7"></div>
+          <div><button class="button-primary b-7">b-7</button></div>
+        </section>
+
+        <section>
+          <h3>Task 08</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру:</p>
+            10x01x%<br>
+            10x01x<br>
+            10x01x<br>
+            <p>и выводить в .out-08.</p>
+          </div>
+          <div class="out out-8"></div>
+          <div><button class="button-primary b-8">b-8</button></div>
+        </section>
+
+        <section>
+          <h3>Task 09</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру:</p>
+            010101<br>
+            101010<br>
+            010101<br>
+            101010<br>
+            010101<br>
+            101010<br>
+            <p>и выводить в .out-09.</p>
+          </div>
+          <div class="out out-9"></div>
+          <div><button class="button-primary b-9">b-9</button></div>
+        </section>
+
+        <section>
+          <h3>Task 10</h3>
+          <div>
+            <p>Функция должна вывести в .out-10 такую строку:</p>
+            <p>5 0 4 1 3 2 2 3 1 4 0 5 </p>
+          </div>
+          <div class="out out-10"></div>
+          <div><button class="button-primary b-10">b-10</button></div>
+        </section>
+
+
+        <section>
+          <h3>Task 11</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру</p>
+            *<br>
+            **<br>
+            ***<br>
+            ****<br>
+            <p>и выводить в .out-11.</p>
+          </div>
+          <div class="out out-11"></div>
+          <div><button class="button-primary b-11">b-11</button></div>
+        </section>
+
+        <section>
+          <h3>Task 12</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру:</p>
+            * _ _ _ <br>
+            * * _ _ <br>
+            * * * _ <br>
+            * * * * <br>
+            <p>и выводить в .out-12.</p>
+          </div>
+          <div class="out out-12"></div>
+          <div><button class="button-primary b-12">b-12</button></div>
+        </section>
+
+        <section>
+          <h3>Task 13</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру:</p>
+            0_1_2_3_4_5_6_7_8_9_10_<br>
+            10_11_12_13_14_15_16_17_18_19_20_<br>
+            20_21_22_23_24_25_26_27_28_29_30_<br>
+            30_31_32_33_34_35_36_37_38_39_40_<br>
+            <p>и выводить в .out-13.</p>
+          </div>
+          <div class="out out-13"></div>
+          <div><button class="button-primary b-13">b-13</button></div>
+        </section>
+
+        <section>
+          <h3>Task 14</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру:</p>
+            00_01_02_03_04_05_06_07_08_09_10_<br>
+            10_11_12_13_14_15_16_17_18_19_20_<br>
+            20_21_22_23_24_25_26_27_28_29_30_<br>
+            30_31_32_33_34_35_36_37_38_39_40_<br>
+            <p>и выводить в .out-14.</p>
+          </div>
+          <div class="out out-14"></div>
+          <div><button class="button-primary b-14">b-14</button></div>
+        </section>
+
+        <section>
+          <h3>Task 15</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру:</p>
+            1_<br>
+            1_2_<br>
+            1_2_3_<br>
+            1_2_3_4_<br>
+            <p>и выводить в .out-15.</p>
+          </div>
+          <div class="out out-15"></div>
+          <div><button class="button-primary b-15">b-15</button></div>
+        </section>
+
+        <section>
+          <h3>Task 16</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру:</p>
+            1_<br>
+            2_2_<br>
+            3_3_3_<br>
+            4_4_4_4_<br>
+            <p>и выводить в .out-16.</p>
+          </div>
+          <div class="out out-16"></div>
+          <div><button class="button-primary b-16">b-16</button></div>
+        </section>
+
+        <section>
+          <h3>Task 17</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру:</p>
+            1_2_3_4_<br>
+            1_2_3_<br>
+            1_2_<br>
+            1_<br>
+            <p>и выводить в .out-17.</p>
+          </div>
+          <div class="out out-17"></div>
+          <div><button class="button-primary b-17">b-17</button></div>
+        </section>
+
+        <section>
+          <h3>Task 18</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру:</p>
+            =_=_=_=_4_<br>
+            =_=_=_3_4_<br>
+            =_=_2_3_4_<br>
+            =_1_2_3_4_<br>
+            0_1_2_3_4_<br>
+            <p>и выводить в .out-18.</p>
+          </div>
+          <div class="out out-18"></div>
+          <div><button class="button-primary b-18">b-18</button></div>
+        </section>
+
+        <section>
+          <h3>Task 19</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру:</p>
+            0_1_2_3_4_<br>
+            =_1_2_3_4_<br>
+            =_=_2_3_4_<br>
+            =_=_=_3_4_<br>
+            =_=_=_=_4_<br>
+            <p>и выводить в .out-19.</p>
+          </div>
+          <div class="out out-19"></div>
+          <div><button class="button-primary b-19">b-19</button></div>
+        </section>
+
+        <section>
+          <h3>Task 20</h3>
+          <div>
+            <p>Функция должна рисовать такую фигуру:</p>
+            0_1_2_3_*_*_6_7_8_9_<br>
+            0_1_2_*_*_*_*_7_8_9_<br>
+            0_1_*_*_*_*_*_*_8_9_<br>
+            0_*_*_*_*_*_*_*_*_9_<br>
+            <p>и выводить в .out-20.</p>
+          </div>
+          <div class="out out-20"></div>
+          <div><button class="button-primary b-20">b-20</button></div>
+        </section>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./sprint_04.js"></script>
+</body>
+
+</html>
