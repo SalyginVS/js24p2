@@ -105,11 +105,15 @@ document.querySelector('.b-6').addEventListener('click', () => {
 let s7 = 'ксилл';
 
 const t07 = () => {
-    let res = '';
-    for (let i = s7.length - 1; i >= 0; i--) {
-        res += s7[i];
-    }
+    const res = s7.split('').reverse().join('');
     document.querySelector('.out-7').textContent = res;
+    
+    // Альтернатива с циклом:
+    // let res = '';
+    // for (let i = s7.length - 1; i >= 0; i--) {
+    //     res += s7[i];
+    // }
+    // document.querySelector('.out-7').textContent = res;
 }
 
 document.querySelector('.b-7').addEventListener('click', t07);
@@ -151,7 +155,7 @@ document.querySelector('.b-9').addEventListener('click', () => {
 let s10 = 'Ассента звезды Суин, расположенной на краю их Вселенной.';
 
 const t10 = () => {
-    return s10.substring(46, 55);    
+    return s10.substring(46, 55);
 }
 
 document.querySelector('.b-10').addEventListener('click', () => {
@@ -178,7 +182,7 @@ document.querySelector('.b-11').addEventListener('click', () => {
 let s12 = 'чью красную кровь нельзя заморозить';
 
 const t12 = () => {
-    return s12.substring(25, 37);
+    return s12.substring(25, 35);
 }
 
 document.querySelector('.b-12').addEventListener('click', () => {
@@ -239,6 +243,8 @@ let s17 = 'Мало-помалу я прижился на Элле';
 
 
 const t17 = () => {
+    const result = s17.slice(26, 30);
+    document.querySelector('.out-17').textContent = result;
 }
 
 document.querySelector('.b-17').addEventListener('click', t17);
@@ -251,6 +257,8 @@ let s18 = 'Ассза посадил реоб на маленькую площа
 
 
 const t18 = () => {
+    const result = s18.slice(0, 5);
+    document.querySelector('.out-18').textContent = result;
 }
 
 document.querySelector('.b-18').addEventListener('click', t18);
@@ -263,6 +271,8 @@ let s19 = '— Взгляни на мислика, — сказал Ассза.'
 
 
 const t19 = () => {
+    const result = s19.slice(10, 20);
+    document.querySelector('.out-19').textContent = result;
 }
 
 document.querySelector('.b-19').addEventListener('click', t19);
@@ -276,7 +286,11 @@ let bar_20 = 49;
 
 
 const t20 = () => {
-
+    let result = '';
+    for (let i = foo_20; i <= bar_20; i++) {
+        result += String.fromCharCode(i) + ' ';
+    }
+    document.querySelector('.out-20').textContent = result.trim();
 }
 
 document.querySelector('.b-20').addEventListener('click', t20);
