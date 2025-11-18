@@ -32,7 +32,7 @@ document.querySelector('.b-2').addEventListener('click', () => {
 
 function t03(sec) {
     const date = new Date(sec * 1000);
-    return date.getMonth()
+    return date.getMonth();
 }
 
 document.querySelector('.b-3').addEventListener('click', () => {
@@ -318,7 +318,7 @@ function t20(time) {
     const date = new Date(time);
     const yearFull = date.getFullYear();
     const yearShort = String(yearFull).slice(-2);
-    const month = date.getMonth() + 1;
+    const month = date.getMonth();
     const monthPadded = lZ(month);
     const day = date.getDate();
     const dayPadded = lZ(day);
