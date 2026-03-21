@@ -1,0 +1,1 @@
+agent path C direct ollama works

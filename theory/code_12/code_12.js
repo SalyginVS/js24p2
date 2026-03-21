@@ -9,7 +9,7 @@ console.log(d1);
 // Что-то он может. Давайте попробуем создать объект
 console.clear();
 
-// const d2 = new Date(); // текущее время
+ const d2t = new Date(); // текущее время
 // const d2 = new Date('2024-05-08 12:58:50');
 // const d2 = new Date('2024/05/08 12:58:50');
 // const d2 = new Date('2024/05/08 12:58:50');
